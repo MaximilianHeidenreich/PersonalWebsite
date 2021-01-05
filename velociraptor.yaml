@@ -1,0 +1,18 @@
+# !! The script uses env variables written to support the fish shell.
+# !! {$FOO} instead of ${FOO}
+# !! To use another shell, you need to change them.
+
+# Environment variables
+env:
+  ALEPH_VERSION: 0.2.27
+  PORT: 8081
+
+# Configure scripts
+scripts:
+  buildCSS: npx tailwindcss-cli@latest build -c ./tailwind.config.js -o ./style/tailwind.css
+  buildAleph: deno run -A https://deno.land/x/aleph@v{$ALEPH_VERSION}/cli.ts build
+  build:
+    - vr buildCSS
+    - vr buildAleph
+  dev: deno run -A https://deno.land/x/aleph@v{$ALEPH_VERSION}/cli.ts dev . --port {$PORT}
+  start: deno run -A -r https://deno.land/x/aleph@v{$ALEPH_VERSION}/cli.ts start . --port {$PORT}
