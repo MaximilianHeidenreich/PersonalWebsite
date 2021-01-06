@@ -1,0 +1,1 @@
+import{createContext}from"../../../esm.sh/react.js";export const RouterContext=createContext({locale:"en",pagePath:"/",pathname:"/",params:{},query:new URLSearchParams});RouterContext.displayName="RouterContext";export const RendererContext=createContext({cache:{headElements:new Map,scriptsElements:new Map}});
