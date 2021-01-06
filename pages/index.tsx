@@ -1,4 +1,4 @@
-import { Import, useDeno } from 'https://deno.land/x/aleph/mod.ts'
+import { Import, useDeno } from '../deps.ts'
 import React, { useState } from 'https://esm.sh/react'
 
 // Styles

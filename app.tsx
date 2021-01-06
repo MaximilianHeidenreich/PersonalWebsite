@@ -1,5 +1,5 @@
 import React, { ComponentType } from 'https://esm.sh/react'
-import { Head } from 'https://deno.land/x/aleph/mod.ts'
+import { Head } from './deps.ts'
 
 // Other deps
 // import ScrollReveal from 'https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/scrollreveal/index.d.ts'
