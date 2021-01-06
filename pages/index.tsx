@@ -24,7 +24,8 @@ export default function Home() {
                     <div className="flex">
                         <Logo />
                         <div className="pt-4">
-                            <h1 className="text-4xl mb-4">🙋‍♂️ <strong>Feel free to explore...</strong></h1>
+                            <h2 className="text-gray-800 font-bold text-5xl leading-tight mb-2">🙋‍♂️ Hello</h2>
+                            <p className="text-gray-700 text-2xl">Feel free to explore...</p>
                             <p className="shortcuts">
                                 <p>Shortcuts</p>
                                 <div className="flex">
@@ -42,7 +43,7 @@ export default function Home() {
                 </div>
 
                 {/* Timeline Controls */}
-                <div className="container mx-auto bg-red-400">
+                <div className="container mx-auto mb-4 bg-red-400">
                     <p>Search</p>
                     <p>Sort Ascending, Descending</p>
                 </div>
