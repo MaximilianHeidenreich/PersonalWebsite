@@ -9,10 +9,10 @@ env:
 
 # Configure scripts
 scripts:
-  buildCSS: npx tailwindcss-cli@latest build -c ./tailwind.config.js -o ./style/tailwind.css
-  buildAleph: deno run -A https://deno.land/x/aleph@v{$ALEPH_VERSION}/cli.ts build
+  buildCSS: npx tailwindcss-cli@latest build -c ./tailwind.config.js -o ./style/vendor/tailwind.css
+  buildAleph: deno run -A https://deno.land/x/aleph@v$ALEPH_VERSION/cli.ts build
   build:
     - vr buildCSS
     - vr buildAleph
-  dev: deno run -A https://deno.land/x/aleph@v{$ALEPH_VERSION}/cli.ts dev . --port {$PORT}
-  start: deno run -A -r https://deno.land/x/aleph@v{$ALEPH_VERSION}/cli.ts start . --port {$PORT}
+  dev: deno run -A https://deno.land/x/aleph@v$ALEPH_VERSION/cli.ts dev . --port $PORT
+  start: deno run -A https://deno.land/x/aleph@v$ALEPH_VERSION/cli.ts start . --port $PORT
